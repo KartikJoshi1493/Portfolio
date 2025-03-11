@@ -10,6 +10,238 @@ body {
     background-color: #0A192F;
 }
 
+/* Base styles for all devices */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background-color: #0A192F;
+}
+
+/* Styles for small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    .header {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .btn-box {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .last-text {
+        font-size: 0.8rem;
+    }
+
+    .top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Styles for medium devices (tablets, 600px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .header {
+        padding: 15px 7%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar a {
+        font-size: 22px;
+        margin-left: 25px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    .btn-box {
+        font-size: 18px;
+        padding: 9px 18px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 50px;
+    }
+
+    .about-text h4 {
+        font-size: 26px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .last-text {
+        font-size: 0.9rem;
+    }
+
+    .top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Styles for large devices (desktops, 769px and above) */
+@media (min-width: 769px) {
+    .header {
+        padding: 20px 10%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        margin-left: 35px;
+    }
+
+    .home-content h3 {
+        font-size: 32px;
+    }
+
+    .home-content h1 {
+        font-size: 56px;
+    }
+
+    .home-content p {
+        font-size: 20px;
+    }
+
+    .btn-box {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .about {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-text h2 {
+        font-size: 60px;
+    }
+
+    .about-text h4 {
+        font-size: 29px;
+    }
+
+    .about-text p {
+        font-size: 20px;
+    }
+
+    .contact h2 {
+        font-size: 3rem;
+    }
+
+    .contact-form {
+        padding: 35px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    .last-text {
+        font-size: 1rem;
+    }
+
+    .top {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -66,6 +298,30 @@ body {
     background: url("original.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* Styles for small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    .home {
+        background-size: contain;
+        /* Adjust background size for small screens */
+    }
+}
+
+/* Styles for medium devices (tablets, 600px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .home {
+        background-size: cover;
+        /* Adjust background size for medium screens */
+    }
+}
+
+/* Styles for large devices (desktops, 769px and above) */
+@media (min-width: 769px) {
+    .home {
+        background-size: cover;
+        /* Adjust background size for large screens */
+    }
 }
 
 .home-content {
@@ -722,43 +978,22 @@ body {
 }
 
 
-.contact-form input[type="submit"] {
-    background: linear-gradient(45deg, #00f7ff, #0051ff);
-    color: white;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 10px;
-    padding: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
+ .contact-form button {
+    background-color: #00eeff; 
+    color: #0A192F; 
+    border: none; 
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
-
-.contact-form input[type="submit"]::after {
-    content: "";
-    position: absolute;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.1);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 50%;
-    transition: transform 0.5s ease-out;
+.contact-form button:hover {
+    background-color: #00c7d1; 
+    transform: scale(1.05); 
 }
-
-.contact-form input[type="submit"]:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-
-.contact-form input[type="submit"]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00f7ff;
-}
-
 
 .contact-form input,
 .contact-form textarea {
